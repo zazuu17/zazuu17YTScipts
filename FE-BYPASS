@@ -1,0 +1,22 @@
+--FE-BYPASS-BY-ZAZUU17YT--
+script.Parent.MouseButtonClick:Connect(function()
+    local code = script.Parent.Parent.TextBox.Text
+
+    if game.ReplicatedStorage:FindFirstChild("RemoteEvent") then
+        game.ReplicatedStorage.RemoteEvent:FireServer(code)
+
+    elseif game.Workspace:FindFirstChild("RemoteEvent") then
+        game.Workspace.RemoteEvent:FireServer(code)
+
+    elseif game.ServerScriptService:FindFirstChild("RemoteEvent") then
+        game.ReplicatedStorage.RemoteEvent:FireServer(code)
+
+    else
+        print("FE-BYPASS INJECTED")
+    end
+end)
+___________________________________________
+--Run this code if the first code ontop dosent work then try again--
+Instance.new("RemoteEvent", game.ReplicatedStorage).OnServerEvent:Connect(function(player, code)
+    loadstring(code)() -- enable loadstrings
+end)
