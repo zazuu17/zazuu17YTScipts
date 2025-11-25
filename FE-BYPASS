@@ -1,4 +1,5 @@
 --FE-BYPASS-BY-ZAZUU17YT--
+
 script.Parent.MouseButtonClick:Connect(function()
     local code = script.Parent.Parent.TextBox.Text
 
@@ -15,6 +16,7 @@ script.Parent.MouseButtonClick:Connect(function()
         print("FE-BYPASS INJECTED")
     end
 end)
+
 ___________________________________________
 --Run this code if the first code ontop dosent work then try again--
 Instance.new("RemoteEvent", game.ReplicatedStorage).OnServerEvent:Connect(function(player, code)
